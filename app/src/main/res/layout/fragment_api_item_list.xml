@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.NavigationActivity">
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/api_news_list"
+        android:name="ci.babatchai.newsreader.ui.home.HomeFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        app:layoutManager="LinearLayoutManager"
+        tools:listitem="@layout/fragment_rss_item" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/api_web_view_wrapper"
+        android:orientation="vertical"
+        android:background="@color/black"
+        android:visibility="gone">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+        <Button
+            android:id="@+id/api_web_view_close_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="0dp"
+            android:padding="0dp"
+            android:text="Fermer" />
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <ImageButton
+                    android:id="@+id/api_read_Web_btn"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:src="@drawable/son"
+                    android:visibility="visible" />
+
+                <ProgressBar
+                    android:id="@+id/api_read_Web_progress"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:indeterminate="true"
+                    android:minWidth="48dp"
+                    android:minHeight="48dp"
+                    android:visibility="gone" />
+            </FrameLayout>
+    </LinearLayout>
+        <WebView
+            android:id="@+id/api_web_viewer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="0dp"
+            android:padding="0dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/api_overlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:background="@color/semi_black"
+        android:foregroundGravity="center"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <ProgressBar
+            android:layout_width="78dp"
+            android:layout_height="112dp"
+            android:layout_gravity="center"
+            android:clickable="false"
+            android:foregroundGravity="center"
+            android:indeterminate="true"
+            android:indeterminateDrawable="@drawable/newspaper" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:foregroundGravity="center"
+            android:gravity="center"
+            android:text="Chargement en cours..." />
+    </LinearLayout>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/api_tts_overlay"
+        android:background="@color/semi_black"
+        android:visibility="gone">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clickable="false"
+            android:src="@color/semi_black"/>
+        <ImageButton
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_gravity="center"
+            android:clickable="true"
+            android:src="@drawable/son"
+            android:id="@+id/api_speaker_mute" />
+    </FrameLayout>
+</FrameLayout>

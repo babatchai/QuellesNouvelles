@@ -1,0 +1,15 @@
+<resources>l
+    <string name="app_name">Quelles nouvelles</string>
+    <string name="title_activity_navigation">NavigationActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Quelles nouvlles?</string>
+    <string name="nav_header_subtitle">Actualité sur mesuree</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Accueil</string>
+    <string name="menu_international">International</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <string name="menu_national">National</string>
+</resources>
